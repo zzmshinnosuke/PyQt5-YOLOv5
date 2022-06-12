@@ -1,3 +1,13 @@
+### zzm 20220612，在ubuntu16上运行的一些问题，显卡3090
+- 报错 QObject:moveToThread: Current thread is not the object's thread.  
+解决：  
+卸载pip uninstall PyQt5   
+重新安装 conda install pyqt  
+- pytorch 和torchvision不兼容，怀疑是pip安装的问题，卸载后用conda安装pytorch1.7.1+cu11.0，还是显示报错。  
+解决： 用conda安装pytorch1.8.1+cu11.3。  
+- usb摄像头打不开，本地的视频和图像可以。  
+
+
 ### 友情提示：由于官方给出的yolov5版本会持续更新。为了避免不兼容的问题，建议使用本仓库的yolov5。如果想兼容最新版本的yolov5，自行更改对应的代码即可。
 本仓库的yolov5版本为**v5.0**，是直接从官方仓库拉取的，支持训练。
 
